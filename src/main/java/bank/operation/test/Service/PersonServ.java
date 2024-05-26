@@ -24,7 +24,7 @@ public class PersonServ implements UserDetails {
         return Arrays.asList(authority);
     }
 
-    private String getEmail(){
+    public String getEmail(){
         return person.getEmail();
     }
     @Override
@@ -55,5 +55,9 @@ public class PersonServ implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public Long getId() {
+        return person.getId();
     }
 }
